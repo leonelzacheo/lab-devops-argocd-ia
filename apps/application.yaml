@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: lab-nginx
+  namespace: argo-applications
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/leonelzacheo/lab-devops-argocd-ia.git'
+    targetRevision: HEAD
+    path: /mnt/sda2/LAB-DEVOPS/ARGOCD-LAB/apps
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: argo-cd-lab
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
