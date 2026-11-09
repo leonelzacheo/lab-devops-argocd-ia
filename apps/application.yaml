@@ -2,13 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: lab-nginx
-  namespace: argo-applications
+  namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'https://github.com/leonelzacheo/lab-devops-argocd-ia.git'
     targetRevision: HEAD
-    path: /mnt/sda2/LAB-DEVOPS/ARGOCD-LAB/apps
+    path: manifests
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: argo-cd-lab
