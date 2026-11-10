@@ -4,7 +4,7 @@ metadata:
   name: meu-app-web
   namespace: argo-cd-lab
 spec:
-  replicas: 5
+  replicas: 10
   selector:
     matchLabels:
       app: meu-app-web
