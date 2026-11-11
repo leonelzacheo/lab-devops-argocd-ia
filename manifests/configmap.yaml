@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: meu-lab-config
-  namespace: argo-cd-lab
-data:
-  ambiente: "desenvolvimento-gitops"
-  mensagem: "Testando o recurso prune do Argo CD"  
