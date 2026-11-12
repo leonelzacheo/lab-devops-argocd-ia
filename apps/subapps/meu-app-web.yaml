@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/leonelzacheo/lab-devops-argocd-ia.git'
-    targetRevision: MAIN
+    targetRevision: main
     path: manifests
   destination:
     server: 'https://kubernetes.default.svc'
